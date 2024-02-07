@@ -1,0 +1,31 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = require("react");
+var interactive_link_1 = require("@modules/common/components/interactive-link");
+var account_nav_1 = require("../components/account-nav");
+var AccountLayout = function (_a) {
+    var customer = _a.customer, children = _a.children;
+    return (<div className="flex-1 small:py-12">
+      <div className="flex-1 content-container h-full max-w-5xl mx-auto bg-white flex flex-col">
+        <div className="grid grid-cols-1  small:grid-cols-[240px_1fr] py-12">
+          <div>{customer && <account_nav_1.default customer={customer}/>}</div>
+          <div className="flex-1">{children}</div>
+        </div>
+        <div className="flex flex-col small:flex-row items-end justify-between small:border-t border-gray-200 py-12 gap-8">
+          <div>
+            <h3 className="text-xl-semi mb-4">Got questions?</h3>
+            <span className="txt-medium">
+              You can find frequently asked questions and answers on our
+              customer service page.
+            </span>
+          </div>
+          <div>
+            <interactive_link_1.default href="/customer-service">
+              Customer Service
+            </interactive_link_1.default>
+          </div>
+        </div>
+      </div>
+    </div>);
+};
+exports.default = AccountLayout;

@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "types": ["cypress"],
+    "baseUrl": "./src",
+    "paths": {
+      "@lib/*": ["lib/*"],
+      "@modules/*": ["modules/*"],
+      "@pages/*": ["pages/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "cypress/support/*.js",
+    "cypress/integration/*.spec.js",
+    ".next/types/**/*.ts",
+    "src/server/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".nyc_output",
+    "cypress-coverage",
+    "coverage",
+    "jest-coverage"
+  ]
+}
